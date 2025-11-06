@@ -1,39 +1,37 @@
-import { NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
-import { createSupabaseServerClient } from '@/lib/supabase'
+import { headers } from "next/headers";
+import { NextResponse } from "next/server";
+import { stripe } from "@/lib/stripe"; // uses your shared client
 
-export const config = {
-  api: {
-    bodyParser: false
-  }
-}
+export const runtime = "nodejs";           // Stripe needs Node runtime
+export const dynamic = "force-dynamic";    // no caching
+export const revalidate = 0;               // disable ISR
 
-// Stripe webhook endpoint
-export async function POST(request: Request) {
-  const sig = request.headers.get('stripe-signature') as string | undefined
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
-  if (!sig || !webhookSecret) {
-    return NextResponse.json({ error: 'Missing signature' }, { status: 400 })
+export async function POST(req: Request) {
+  const sig = headers().get("stripe-signature");
+  if (!sig) {
+    return new NextResponse("Missing Stripe signature", { status: 400 });
   }
-  const buf = await request.arrayBuffer()
-  const body = Buffer.from(buf)
-  let event
+
+  // get the raw body text (important!)
+  const body = await req.text();
+
   try {
-    event = stripe.webhooks.constructEvent(body, sig, webhookSecret)
+    const event = stripe.webhooks.constructEvent(
+      body,
+      sig,
+      process.env.STRIPE_WEBHOOK_SECRET || ""
+    );
+
+    // ✅ handle any event types you want below
+    // switch (event.type) {
+    //   case "checkout.session.completed":
+    //     // your logic here
+    //     break;
+    // }
+
+    return NextResponse.json({ received: true });
   } catch (err: any) {
-    console.error('⚠️  Webhook signature verification failed.', err.message)
-    return NextResponse.json({ error: `Webhook Error: ${err.message}` }, { status: 400 })
+    console.error("⚠️ Stripe webhook error:", err.message);
+    return new NextResponse(`Webhook Error: ${err.message}`, { status: 400 });
   }
-  const supabase = createSupabaseServerClient()
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object as any
-    const paymentIntentId = session.payment_intent || session.id
-    // Mark booking as paid
-    await supabase
-      .from('bookings')
-      .update({ status: 'paid' })
-      .eq('payment_intent_id', paymentIntentId)
-    // TODO: send confirmation email to buyer and notification to seller
-  }
-  return NextResponse.json({ received: true })
 }
