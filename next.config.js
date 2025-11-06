@@ -1,17 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: { appDir: true },
   pageExtensions: ['ts', 'tsx'],
   images: {
-    domains: [
-      'images.unsplash.com',
-      'lh3.googleusercontent.com',
-      'res.cloudinary.com',
-    ],
-    remotePatterns: [
-      { protocol: 'https', hostname: '**.supabase.co' },
-    ],
+    domains: ['images.unsplash.com','lh3.googleusercontent.com','res.cloudinary.com'],
+    remotePatterns: [{ protocol: 'https', hostname: '**.supabase.co' }],
   },
   async headers() {
     return [
@@ -25,5 +18,4 @@ const nextConfig = {
     ];
   },
 };
-
 module.exports = nextConfig;

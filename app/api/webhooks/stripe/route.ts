@@ -1,19 +1,16 @@
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe"; // uses your shared client
+import { stripe } from "@/lib/stripe";
 
-export const runtime = "nodejs";           // Stripe needs Node runtime
-export const dynamic = "force-dynamic";    // no caching
-export const revalidate = 0;               // disable ISR
+export const runtime = "nodejs";        // ✅ no Edge
+export const dynamic = "force-dynamic"; // ✅ no caching
+export const revalidate = 0;            // ✅
 
 export async function POST(req: Request) {
   const sig = headers().get("stripe-signature");
-  if (!sig) {
-    return new NextResponse("Missing Stripe signature", { status: 400 });
-  }
+  if (!sig) return new NextResponse("Missing Stripe signature", { status: 400 });
 
-  // get the raw body text (important!)
-  const body = await req.text();
+  const body = await req.text(); // raw body
 
   try {
     const event = stripe.webhooks.constructEvent(
@@ -22,16 +19,11 @@ export async function POST(req: Request) {
       process.env.STRIPE_WEBHOOK_SECRET || ""
     );
 
-    // ✅ handle any event types you want below
-    // switch (event.type) {
-    //   case "checkout.session.completed":
-    //     // your logic here
-    //     break;
-    // }
+    // TODO: handle event types if needed
 
     return NextResponse.json({ received: true });
   } catch (err: any) {
-    console.error("⚠️ Stripe webhook error:", err.message);
+    console.error("Stripe webhook error:", err.message);
     return new NextResponse(`Webhook Error: ${err.message}`, { status: 400 });
   }
 }
