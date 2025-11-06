@@ -1,26 +1,16 @@
-const { withContentlayer } = require('next-contentlayer');
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    providerImportSource: '@mdx-js/react',
-  },
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  pageExtensions: ['tsx', 'ts', 'mdx'],
+  reactStrictMode: true,
+  experimental: { appDir: true },
+  pageExtensions: ['ts', 'tsx'],
   images: {
-    domains: ['images.unsplash.com', 'lh3.googleusercontent.com', 'res.cloudinary.com'],
+    domains: [
+      'images.unsplash.com',
+      'lh3.googleusercontent.com',
+      'res.cloudinary.com',
+    ],
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.supabase.co',
-      },
+      { protocol: 'https', hostname: '**.supabase.co' },
     ],
   },
   async headers() {
@@ -36,4 +26,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(withMDX(nextConfig));
+module.exports = nextConfig;
