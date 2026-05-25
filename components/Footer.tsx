@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { Instagram, Linkedin, Mail, ArrowRight } from 'lucide-react'
 
 const footerLinks = {
   catalog: [
@@ -20,6 +19,44 @@ const footerLinks = {
     { href: '#', label: 'Terms of Service' },
     { href: '#', label: 'Shipping Policy' },
   ],
+}
+
+function IconInstagram() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  )
+}
+
+function IconLinkedin() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
+function IconMail() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  )
+}
+
+function IconArrowRight() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  )
 }
 
 export default function Footer() {
@@ -51,7 +88,7 @@ export default function Footer() {
               aria-label="Subscribe to newsletter"
             >
               Subscribe
-              <ArrowRight size={14} aria-hidden="true" />
+              <IconArrowRight />
             </button>
           </form>
         </div>
@@ -80,21 +117,21 @@ export default function Footer() {
                 className="w-9 h-9 flex items-center justify-center border border-border text-muted hover:text-foreground hover:border-accent transition-colors duration-200"
                 aria-label="ET Distribution on Instagram"
               >
-                <Instagram size={16} aria-hidden="true" />
+                <IconInstagram />
               </a>
               <a
                 href="#"
                 className="w-9 h-9 flex items-center justify-center border border-border text-muted hover:text-foreground hover:border-accent transition-colors duration-200"
                 aria-label="ET Distribution on LinkedIn"
               >
-                <Linkedin size={16} aria-hidden="true" />
+                <IconLinkedin />
               </a>
               <a
                 href="#"
                 className="w-9 h-9 flex items-center justify-center border border-border text-muted hover:text-foreground hover:border-accent transition-colors duration-200"
                 aria-label="ET Distribution email"
               >
-                <Mail size={16} aria-hidden="true" />
+                <IconMail />
               </a>
             </div>
           </div>
