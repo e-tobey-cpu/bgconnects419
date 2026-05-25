@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Instagram, Linkedin, Twitter, ArrowRight } from 'lucide-react'
+import { Instagram, Linkedin, X, ArrowRight } from 'lucide-react'
 
 const footerLinks = {
   catalog: [
@@ -94,7 +94,7 @@ export default function Footer() {
                 className="w-9 h-9 flex items-center justify-center border border-border text-muted hover:text-foreground hover:border-accent transition-colors duration-200"
                 aria-label="ET Distribution on Twitter"
               >
-                <Twitter size={16} aria-hidden="true" />
+                <X size={16} aria-hidden="true" />
               </a>
             </div>
           </div>
