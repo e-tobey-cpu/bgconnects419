@@ -22,3 +22,15 @@ export const reviewInputSchema = z.object({
 })
 
 export type ReviewInput = z.infer<typeof reviewInputSchema>
+
+// Alias expected by api/reviews/route.ts
+export const createReviewSchema = reviewInputSchema
+
+export const createBookingSchema = z.object({
+  service_id: z.string().uuid(),
+  start_at: z.string().datetime(),
+  end_at: z.string().datetime(),
+  coupon_code: z.string().optional()
+})
+
+export type CreateBookingInput = z.infer<typeof createBookingSchema>
