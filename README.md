@@ -90,7 +90,7 @@ Running locally requires Node.js ≥ 18.  Copy `.env.example` to `.env.local`, f
 ## Assumptions / trade‑offs
 
 * Some optional integrations (Google/Microsoft Calendar, Twilio, Stripe Tax) are disabled by default and require manual configuration.
-* The skeleton code includes placeholders and simplified logic for brevity; you may need to adjust queries or UI for your real use case.
+* The skeleton code includes placeholders and simplified logic for brevity; you may need to adjust the queries or UI for your real use case.
 * Rate‑limiting, advanced error handling and unit tests are minimal and should be expanded in production.
 * RLS policies assume that user IDs in Supabase match authenticated users; adapt them if your auth provider differs.
 * This starter uses Supabase storage for image uploads; you can swap it with another provider if desired.
