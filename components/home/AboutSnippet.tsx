@@ -18,7 +18,7 @@ export default function AboutSnippet() {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
           className="relative aspect-[4/3] overflow-hidden order-2 lg:order-1"
         >
           <Image

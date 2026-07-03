@@ -38,6 +38,8 @@ export async function POST(request: Request) {
     .eq('id', service_id)
     .maybeSingle()
   if (serviceError || !service) return NextResponse.json({ error: serviceError?.message || 'Service not found' }, { status: 404 })
+  // Supabase types the joined relation as an array; normalize to a single seller object.
+  const seller = Array.isArray(service.seller) ? service.seller[0] : service.seller
   const priceCents = service.price_cents
 
   // Apply coupon if provided
@@ -67,7 +69,7 @@ export async function POST(request: Request) {
     .insert({
       service_id,
       buyer_id: null, // TODO: set buyer id from auth
-      seller_id: service.seller.id,
+      seller_id: seller?.id,
       start_at,
       end_at,
       status: 'pending',
@@ -85,19 +87,22 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       mode: 'payment',
-      customer_email: null,
       line_items: [
         {
-          name: service.title,
-          amount: discounted,
-          currency: process.env.NEXT_PUBLIC_DEFAULT_CURRENCY || 'usd',
+          price_data: {
+            currency: process.env.NEXT_PUBLIC_DEFAULT_CURRENCY || 'usd',
+            product_data: {
+              name: service.title
+            },
+            unit_amount: discounted
+          },
           quantity: 1
         }
       ],
       payment_intent_data: {
         application_fee_amount: applicationFee,
         transfer_data: {
-          destination: service.seller.stripe_account_id || undefined
+          destination: seller?.stripe_account_id || undefined
         }
       },
       success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/account?success=1`,

@@ -139,7 +139,7 @@ function ProductsGrid() {
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as const }}
               className="group flex flex-col bg-surface border border-border hover:border-accent/40 transition-all duration-400"
             >
               {/* Image */}

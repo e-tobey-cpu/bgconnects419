@@ -62,7 +62,7 @@ export default function FeaturedProducts() {
               key={product.id}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] as const }}
               className="group relative flex flex-col bg-background border border-border hover:border-accent/40 transition-all duration-400"
               aria-label={product.name}
             >
