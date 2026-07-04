@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { segments } from '@/lib/data'
+import { featuredSuppliers } from '@/lib/data'
 
 export default function SupplierSection() {
   const ref = useRef(null)
@@ -20,7 +20,7 @@ export default function SupplierSection() {
             transition={{ duration: 0.5 }}
             className="text-xs uppercase tracking-[0.25em] text-accent mb-3"
           >
-            Our Network
+            Supplier Network
           </motion.p>
           <motion.h2
             id="suppliers-heading"
@@ -29,29 +29,49 @@ export default function SupplierSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-display-md font-serif font-bold text-foreground text-balance"
           >
-            Sourcing across
+            A trusted network
             <br />
-            every category.
+            of suppliers.
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-sm text-muted-foreground max-w-2xl mx-auto mt-5 leading-relaxed text-pretty"
+          >
+            ET Distribution maintains sourcing relationships with manufacturers, distributors, and
+            wholesale suppliers across multiple product categories. Our network supports grocery,
+            specialty food, health &amp; wellness, home goods, household essentials, and consumer
+            products throughout the United States.
+          </motion.p>
         </div>
 
-        {/* Logo wall */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-xs uppercase tracking-[0.25em] text-muted text-center mb-6"
+        >
+          Featured Supplier Relationships
+        </motion.p>
+
+        {/* Supplier wall */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.35 }}
           className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border"
           role="list"
-          aria-label="Product categories we distribute"
+          aria-label="Featured supplier relationships"
         >
-          {segments.map((segment) => (
+          {featuredSuppliers.map((supplier) => (
             <div
-              key={segment.id}
+              key={supplier}
               role="listitem"
               className="bg-surface flex items-center justify-center py-10 px-8 group hover:bg-surface-elevated transition-colors duration-300"
             >
-              <span className="text-lg font-serif font-semibold text-muted group-hover:text-foreground transition-colors duration-300 tracking-wide">
-                {segment.name}
+              <span className="text-lg font-serif font-semibold text-muted group-hover:text-foreground transition-colors duration-300 tracking-wide text-center text-balance">
+                {supplier}
               </span>
             </div>
           ))}

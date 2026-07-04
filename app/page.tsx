@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import HeroSection from '@/components/home/HeroSection'
 import CategorySection from '@/components/home/CategorySection'
 import FeaturedProducts from '@/components/home/FeaturedProducts'
+import BrandsSection from '@/components/home/BrandsSection'
 import AboutSnippet from '@/components/home/AboutSnippet'
 import SupplierSection from '@/components/home/SupplierSection'
 import Link from 'next/link'
@@ -22,6 +23,7 @@ export default function HomePage() {
         <HeroSection />
         <CategorySection />
         <FeaturedProducts />
+        <BrandsSection />
         <AboutSnippet />
         <SupplierSection />
 
