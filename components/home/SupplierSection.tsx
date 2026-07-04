@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { suppliers } from '@/lib/data'
+import { segments } from '@/lib/data'
 
 export default function SupplierSection() {
   const ref = useRef(null)
