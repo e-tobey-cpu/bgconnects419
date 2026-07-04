@@ -5,14 +5,13 @@ import CategorySection from '@/components/home/CategorySection'
 import FeaturedProducts from '@/components/home/FeaturedProducts'
 import AboutSnippet from '@/components/home/AboutSnippet'
 import SupplierSection from '@/components/home/SupplierSection'
-import TestimonialsSection from '@/components/home/TestimonialsSection'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'ET Distribution — Premium Global Distributor',
+  title: 'ET Distribution — Wholesale Sourcing & Distribution',
   description:
-    'ET Distribution is a premier global distributor of electronics, home goods, industrial tools, and apparel. 15,000+ SKUs. 200+ verified suppliers. 48 states served.',
+    'ET Distribution LLC is a wholesale sourcing and distribution company in Woodstock, NY, serving retailers, wholesalers, and business buyers across grocery, specialty food, health & wellness, household essentials, and consumer products throughout the United States.',
 }
 
 export default function HomePage() {
@@ -25,7 +24,6 @@ export default function HomePage() {
         <FeaturedProducts />
         <AboutSnippet />
         <SupplierSection />
-        <TestimonialsSection />
 
         {/* CTA Band */}
         <section className="bg-accent py-20 px-6 lg:px-8" aria-labelledby="cta-heading">

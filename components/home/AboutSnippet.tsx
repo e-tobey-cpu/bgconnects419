@@ -22,7 +22,7 @@ export default function AboutSnippet() {
           className="relative aspect-[4/3] overflow-hidden order-2 lg:order-1"
         >
           <Image
-            src="/images/about-warehouse.jpg"
+            src="/images/about-warehouse.png"
             alt="ET Distribution warehouse operations"
             fill
             className="object-cover"
@@ -32,8 +32,8 @@ export default function AboutSnippet() {
 
           {/* Floating stat card */}
           <div className="absolute bottom-6 left-6 bg-background/90 backdrop-blur-sm border border-border p-5">
-            <p className="text-3xl font-serif font-bold text-foreground">15+</p>
-            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mt-1">Years in Distribution</p>
+            <p className="text-3xl font-serif font-bold text-foreground">48</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mt-1">States Served</p>
           </div>
         </motion.div>
 
@@ -66,14 +66,14 @@ export default function AboutSnippet() {
             className="space-y-5 text-muted-foreground leading-relaxed text-pretty"
           >
             <p>
-              ET Distribution was founded on a simple principle: sourcing and logistics should be
-              transparent, reliable, and built around the buyer&apos;s needs. Over 15 years, we&apos;ve grown
-              into one of North America&apos;s most trusted multi-category distributors.
+              ET Distribution is built on a simple principle: sourcing and logistics should be
+              transparent, reliable, and built around the buyer&apos;s needs. Based in Woodstock, New York,
+              we serve retailers, wholesalers, distributors, and business buyers across the United States.
             </p>
             <p>
-              Our network spans 200+ verified manufacturers across electronics, home goods,
-              industrial tools, and branded apparel. We maintain strict quality controls, competitive
-              MOQs, and flexible logistics for buyers of every scale.
+              Our sourcing spans grocery, specialty food, health &amp; wellness, household essentials,
+              cleaning products, and home goods. Through trusted supplier relationships, we help
+              businesses secure dependable inventory with competitive MOQs and flexible logistics.
             </p>
           </motion.div>
 
@@ -84,10 +84,10 @@ export default function AboutSnippet() {
             className="mt-10 grid grid-cols-2 gap-6 pb-10 border-b border-border"
           >
             {[
-              { value: '200+', label: 'Verified Suppliers' },
+              { value: '50+', label: 'Active SKUs' },
+              { value: '12+', label: 'Supplier Relationships' },
               { value: '48', label: 'States Served' },
-              { value: '15,000+', label: 'Active SKUs' },
-              { value: '$2.4B+', label: 'Distributed' },
+              { value: '10,000+', label: 'Orders Fulfilled' },
             ].map((s) => (
               <div key={s.label}>
                 <p className="text-2xl font-serif font-bold text-foreground">{s.value}</p>

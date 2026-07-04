@@ -8,14 +8,14 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'ET Distribution is a premier global distributor sourcing and delivering premium products across North America since 2008.',
+    'ET Distribution LLC is a wholesale sourcing and distribution company based in Woodstock, New York, serving retailers, wholesalers, and business buyers across the United States.',
 }
 
 const values = [
   {
     title: 'Verified Quality',
     description:
-      'Every supplier in our network undergoes a rigorous 14-point vetting process including factory audits, compliance reviews, and sample testing.',
+      'We review every supplier for quality, compliance, and delivery reliability before onboarding, so you can trust the inventory you receive.',
   },
   {
     title: 'Transparent Pricing',
@@ -25,22 +25,13 @@ const values = [
   {
     title: 'Scalable Logistics',
     description:
-      'From pallets to full truckloads, our logistics network is built to scale with your business across 48 US states.',
+      'From single pallets to full truckloads, our sourcing and logistics are built to scale with your business across 48 US states.',
   },
   {
     title: 'Dedicated Support',
     description:
-      'Every account is assigned a dedicated sourcing specialist who knows your category and responds within 24 hours.',
+      'Every account works with a sourcing contact who knows your categories and responds quickly to your needs.',
   },
-]
-
-const milestones = [
-  { year: '2008', event: 'ET Distribution founded in Los Angeles, CA' },
-  { year: '2011', event: 'Expanded to electronics and industrial tool categories' },
-  { year: '2014', event: 'Opened Miami and New York distribution hubs' },
-  { year: '2017', event: 'Surpassed 5,000 active SKUs in catalog' },
-  { year: '2020', event: 'Launched digital sourcing platform for wholesale buyers' },
-  { year: '2023', event: 'Crossed $2.4B in distributed product value' },
 ]
 
 export default function AboutPage() {
@@ -51,7 +42,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="relative bg-surface border-b border-border pt-36 pb-24 px-6 lg:px-8 overflow-hidden" aria-labelledby="about-hero-heading">
           <div className="absolute inset-0 opacity-5">
-            <Image src="/images/about-warehouse.jpg" alt="" fill className="object-cover" aria-hidden="true" />
+            <Image src="/images/about-warehouse.png" alt="" fill className="object-cover" aria-hidden="true" />
           </div>
           <div className="relative max-w-7xl mx-auto">
             <p className="text-xs uppercase tracking-[0.25em] text-accent mb-4">About ET Distribution</p>
@@ -59,9 +50,9 @@ export default function AboutPage() {
               A distributor built for the modern supply chain.
             </h1>
             <p className="text-muted-foreground text-pretty leading-relaxed max-w-2xl text-lg">
-              Founded in 2008, ET Distribution has grown into one of North America&apos;s most trusted
-              multi-category distributors — connecting global manufacturers with retailers,
-              wholesalers, and e-commerce brands at every scale.
+              ET Distribution LLC is a wholesale sourcing and distribution company based in
+              Woodstock, New York, connecting manufacturers and suppliers with retailers,
+              wholesalers, distributors, and business buyers across the United States.
             </p>
           </div>
         </section>
@@ -72,19 +63,19 @@ export default function AboutPage() {
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-accent mb-4">Our Story</p>
               <h2 id="story-heading" className="text-display-md font-serif font-bold text-foreground text-balance mb-8">
-                15 years of sourcing excellence.
+                Sourcing you can rely on.
               </h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed text-pretty">
                 <p>
-                  ET Distribution was founded on a conviction that wholesale sourcing in America was
-                  broken. Fragmented supplier networks, opaque pricing, and unreliable logistics were
-                  costing businesses time and money. We set out to fix that.
+                  ET Distribution is built on a simple conviction: wholesale sourcing should be
+                  transparent, reliable, and built around the buyer&apos;s needs. We help businesses
+                  cut through fragmented supplier networks and opaque pricing.
                 </p>
                 <p>
-                  Today our platform spans four major product verticals — consumer electronics,
-                  home goods, industrial tools, and branded apparel — with 200+ vetted manufacturers
-                  on five continents. We maintain physical distribution hubs in Los Angeles, Miami,
-                  and New York, enabling fast, compliant delivery to 48 US states.
+                  Our sourcing spans grocery, specialty food, health &amp; wellness, household
+                  essentials, cleaning products, home goods, and consumer products. Through trusted
+                  supplier relationships, we connect businesses with dependable inventory and
+                  scalable sourcing solutions across 48 US states.
                 </p>
                 <p>
                   Whether you&apos;re a regional retailer, a national chain, or an e-commerce operator
@@ -94,15 +85,15 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/about-warehouse.jpg"
+                src="/images/about-warehouse.png"
                 alt="ET Distribution warehouse operations"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute bottom-6 right-6 bg-background/90 backdrop-blur-sm border border-border p-5">
-                <p className="text-3xl font-serif font-bold text-foreground">200+</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mt-1">Verified Suppliers</p>
+                <p className="text-3xl font-serif font-bold text-foreground">48</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mt-1">States Served</p>
               </div>
             </div>
           </div>
@@ -112,10 +103,10 @@ export default function AboutPage() {
         <section className="bg-surface border-y border-border py-16 px-6 lg:px-8" aria-label="Company statistics">
           <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {[
-              { value: '15,000+', label: 'Active SKUs' },
-              { value: '200+', label: 'Verified Suppliers' },
+              { value: '50+', label: 'Active SKUs' },
+              { value: '12+', label: 'Supplier Relationships' },
               { value: '48', label: 'States Served' },
-              { value: '$2.4B+', label: 'Products Distributed' },
+              { value: '10,000+', label: 'Orders Fulfilled' },
             ].map((stat) => (
               <div key={stat.label} className="bg-surface flex flex-col items-center justify-center py-12 px-8 text-center">
                 <p className="text-4xl font-serif font-bold text-foreground mb-2">{stat.value}</p>
@@ -148,53 +139,30 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Timeline */}
-        <section className="bg-surface border-y border-border py-28 px-6 lg:px-8" aria-labelledby="timeline-heading">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3">Our History</p>
-              <h2 id="timeline-heading" className="text-display-md font-serif font-bold text-foreground text-balance">
-                Built over
-                <br />
-                15 years.
-              </h2>
-            </div>
-            <ol className="relative border-l border-border pl-8 space-y-8">
-              {milestones.map((m) => (
-                <li key={m.year} className="relative">
-                  <div className="absolute -left-[2.125rem] top-0 w-3 h-3 bg-accent border-2 border-background rounded-full" aria-hidden="true" />
-                  <p className="text-xs uppercase tracking-[0.2em] text-accent mb-1">{m.year}</p>
-                  <p className="text-sm text-foreground">{m.event}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Team image */}
-        <section className="py-28 px-6 lg:px-8" aria-labelledby="team-heading">
+        {/* Operations image */}
+        <section className="bg-surface border-y border-border py-28 px-6 lg:px-8" aria-labelledby="ops-heading">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/3] overflow-hidden order-2 lg:order-1">
               <Image
-                src="/images/about-team.jpg"
-                alt="ET Distribution leadership team"
+                src="/images/about-team.png"
+                alt="ET Distribution logistics operations"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="order-1 lg:order-2">
-              <p className="text-xs uppercase tracking-[0.25em] text-accent mb-4">Our Team</p>
-              <h2 id="team-heading" className="text-display-md font-serif font-bold text-foreground text-balance mb-6">
+              <p className="text-xs uppercase tracking-[0.25em] text-accent mb-4">How We Work</p>
+              <h2 id="ops-heading" className="text-display-md font-serif font-bold text-foreground text-balance mb-6">
                 People who know
                 <br />
                 distribution.
               </h2>
               <p className="text-muted-foreground leading-relaxed text-pretty mb-8">
-                Our team is composed of supply chain veterans, sourcing specialists, and logistics
-                engineers who have spent careers at the world&apos;s leading distributors and manufacturers.
-                When you work with ET Distribution, you get a partner who understands your business
-                as well as you do.
+                We focus on the details that keep supply chains moving: careful supplier vetting,
+                accurate inventory, and dependable fulfillment. When you work with ET Distribution,
+                you get a partner focused on securing reliable inventory and scalable sourcing for
+                your business.
               </p>
               <Link
                 href="/contact"

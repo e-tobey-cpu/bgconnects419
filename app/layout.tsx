@@ -16,12 +16,12 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   title: {
-    default: 'ET Distribution — Premium Global Distributor',
+    default: 'ET Distribution — Wholesale Sourcing & Distribution',
     template: '%s | ET Distribution',
   },
   description:
-    'ET Distribution is a premium global distributor sourcing and delivering high-quality products across electronics, home goods, industrial tools, and apparel. Trusted by retailers and wholesalers worldwide.',
-  keywords: ['distributor', 'wholesale', 'B2B', 'electronics', 'industrial', 'bulk orders', 'global supply chain'],
+    'ET Distribution LLC is a wholesale sourcing and distribution company in Woodstock, NY, connecting retailers, wholesalers, and business buyers with reliable inventory across grocery, specialty food, health & wellness, household essentials, and consumer products throughout the United States.',
+  keywords: ['distributor', 'wholesale', 'B2B', 'grocery', 'specialty food', 'health and wellness', 'household essentials', 'consumer products', 'sourcing'],
   icons: { icon: '/favicon.ico' },
 }
 

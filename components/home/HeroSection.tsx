@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img
           ref={imgRef}
-          src="/images/hero-bg.jpg"
+          src="/images/hero-bg.png"
           alt=""
           aria-hidden="true"
           className={`w-full h-full object-cover transition-opacity duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}
@@ -74,9 +74,11 @@ export default function HeroSection() {
             variants={fadeUp}
             className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-10 text-pretty"
           >
-            ET Distribution connects leading manufacturers with wholesale buyers
-            across electronics, home goods, non-perishables, industrial tools, and apparel.
-            Serving 48 states with 50+ active SKUs.
+            ET Distribution connects manufacturers, distributors, retailers, and
+            wholesale buyers across grocery, specialty food, health &amp; wellness,
+            household essentials, and consumer products. Through trusted supplier
+            relationships and scalable sourcing, we help businesses secure reliable
+            inventory throughout the United States.
           </motion.p>
 
           <motion.div
@@ -113,9 +115,9 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-8 lg:gap-16">
             {[
               { value: '50+', label: 'Active SKUs' },
-              { value: '8+', label: 'Verified Suppliers' },
+              { value: '12+', label: 'Supplier Relationships' },
               { value: '48', label: 'States Served' },
-              { value: '$150K+', label: 'Products Distributed' },
+              { value: '10,000+', label: 'Orders Fulfilled' },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="text-2xl font-serif font-bold text-foreground">{stat.value}</span>

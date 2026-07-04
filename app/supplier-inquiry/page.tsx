@@ -10,18 +10,18 @@ import { useRef } from 'react'
 const benefits = [
   {
     icon: Globe,
-    title: 'Global Reach',
-    description: 'Access to retailers and distributors across North America, Europe, and Asia-Pacific.',
+    title: 'Nationwide Reach',
+    description: 'Access to retailers, wholesalers, and distributors across 48 US states.',
   },
   {
     icon: Package,
     title: 'Streamlined Logistics',
-    description: 'Our fulfillment network handles warehousing, shipping, and returns management.',
+    description: 'We help coordinate warehousing, shipping, and fulfillment for reliable delivery.',
   },
   {
     icon: TrendingUp,
     title: 'Growth Partnership',
-    description: 'Marketing support, demand forecasting, and dedicated account management.',
+    description: 'Demand insight and dedicated account support to help grow your placements.',
   },
   {
     icon: Building2,
@@ -31,12 +31,11 @@ const benefits = [
 ]
 
 const categories = [
-  'Consumer Electronics',
-  'Home & Living',
-  'Industrial & Tools',
-  'Apparel & Accessories',
+  'Grocery & Specialty Food',
   'Health & Wellness',
-  'Automotive Parts',
+  'Household & Cleaning',
+  'Home Goods',
+  'Consumer Products',
   'Other',
 ]
 
@@ -80,9 +79,9 @@ export default function SupplierInquiryPage() {
               Become a Supplier
             </h1>
             <p className="mt-4 text-muted-foreground max-w-2xl text-pretty">
-              Join our network of 200+ verified manufacturers and reach thousands of retailers
-              worldwide. We handle logistics, compliance, and customer relationships so you can
-              focus on what you do best.
+              Join our growing network of vetted suppliers and reach retailers, wholesalers, and
+              business buyers across the United States. We help with logistics, compliance, and
+              customer relationships so you can focus on what you do best.
             </p>
           </div>
         </div>

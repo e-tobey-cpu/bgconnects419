@@ -8,28 +8,12 @@ import Link from 'next/link'
 
 const officeLocations = [
   {
-    city: 'Los Angeles',
-    address: '3200 E 26th St, Vernon, CA 90058',
-    phone: '+1 (213) 555-0142',
-    email: 'la@etdistribution.com',
-    hours: 'Mon–Fri 7am–6pm PST',
+    city: 'Woodstock, New York',
+    address: 'Woodstock, New York, United States',
+    phone: '',
+    email: 'info@etdistribution.com',
+    hours: 'Mon–Fri 9am–5pm EST',
     type: 'Headquarters',
-  },
-  {
-    city: 'Miami',
-    address: '2100 NW 97th Ave, Doral, FL 33172',
-    phone: '+1 (305) 555-0189',
-    email: 'miami@etdistribution.com',
-    hours: 'Mon–Fri 8am–5pm EST',
-    type: 'Distribution Hub',
-  },
-  {
-    city: 'New York',
-    address: '150 Varick St, New York, NY 10013',
-    phone: '+1 (212) 555-0231',
-    email: 'ny@etdistribution.com',
-    hours: 'Mon–Fri 9am–6pm EST',
-    type: 'Sales Office',
   },
 ]
 
@@ -243,10 +227,12 @@ export default function ContactPage() {
                         <MapPin size={13} className="text-accent shrink-0 mt-0.5" aria-hidden="true" />
                         <span>{office.address}</span>
                       </div>
-                      <div className="flex items-center gap-2.5">
-                        <Phone size={13} className="text-accent shrink-0" aria-hidden="true" />
-                        <a href={`tel:${office.phone}`} className="hover:text-foreground transition-colors duration-200">{office.phone}</a>
-                      </div>
+                      {office.phone && (
+                        <div className="flex items-center gap-2.5">
+                          <Phone size={13} className="text-accent shrink-0" aria-hidden="true" />
+                          <a href={`tel:${office.phone}`} className="hover:text-foreground transition-colors duration-200">{office.phone}</a>
+                        </div>
+                      )}
                       <div className="flex items-center gap-2.5">
                         <Mail size={13} className="text-accent shrink-0" aria-hidden="true" />
                         <a href={`mailto:${office.email}`} className="hover:text-foreground transition-colors duration-200">{office.email}</a>

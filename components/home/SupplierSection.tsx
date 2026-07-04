@@ -29,9 +29,9 @@ export default function SupplierSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-display-md font-serif font-bold text-foreground text-balance"
           >
-            Trusted by the world&apos;s
+            Sourcing across
             <br />
-            leading manufacturers.
+            every category.
           </motion.h2>
         </div>
 
@@ -42,16 +42,16 @@ export default function SupplierSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border"
           role="list"
-          aria-label="Supplier partners"
+          aria-label="Product categories we distribute"
         >
-          {suppliers.map((supplier) => (
+          {segments.map((segment) => (
             <div
-              key={supplier.id}
+              key={segment.id}
               role="listitem"
               className="bg-surface flex items-center justify-center py-10 px-8 group hover:bg-surface-elevated transition-colors duration-300"
             >
               <span className="text-lg font-serif font-semibold text-muted group-hover:text-foreground transition-colors duration-300 tracking-wide">
-                {supplier.name}
+                {segment.name}
               </span>
             </div>
           ))}
@@ -64,8 +64,9 @@ export default function SupplierSection() {
           className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-12 pt-10 border-t border-border"
         >
           <p className="text-sm text-muted-foreground text-balance text-center sm:text-left max-w-md">
-            ET Distribution works with 200+ verified global manufacturers. We vet every
-            supplier for quality, compliance, and delivery reliability before onboarding.
+            ET Distribution partners with a growing network of vetted manufacturers. We
+            review every supplier for quality, compliance, and delivery reliability before
+            onboarding.
           </p>
           <Link
             href="/supplier-inquiry"

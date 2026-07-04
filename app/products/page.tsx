@@ -6,7 +6,7 @@ import ProductsClient from './ProductsClient'
 export const metadata: Metadata = {
   title: 'Product Catalog',
   description:
-    'Browse ET Distribution\'s full catalog of 15,000+ SKUs across electronics, home goods, industrial tools, and apparel.',
+    'Browse ET Distribution\'s catalog across grocery, specialty food, health & wellness, household essentials, and home goods.',
 }
 
 export default function ProductsPage() {
@@ -22,8 +22,9 @@ export default function ProductsPage() {
               Product Catalog
             </h1>
             <p className="mt-4 text-muted-foreground text-pretty max-w-2xl">
-              Explore 15,000+ SKUs from 200+ verified global suppliers. Filter by category, request
-              quotes, and connect with our team for custom sourcing needs.
+              Explore our catalog across grocery, specialty food, health &amp; wellness, household
+              essentials, and home goods. Filter by category, request quotes, and connect with our
+              team for custom sourcing needs.
             </p>
           </div>
         </div>

@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 const footerLinks = {
   catalog: [
-    { href: '/products?category=electronics', label: 'Consumer Electronics' },
-    { href: '/products?category=home', label: 'Home & Living' },
-    { href: '/products?category=industrial', label: 'Industrial & Tools' },
-    { href: '/products?category=apparel', label: 'Apparel & Accessories' },
+    { href: '/products?category=grocery', label: 'Grocery & Specialty Food' },
+    { href: '/products?category=wellness', label: 'Health & Wellness' },
+    { href: '/products?category=household', label: 'Household & Cleaning' },
+    { href: '/products?category=home', label: 'Home Goods' },
   ],
   company: [
     { href: '/about', label: 'About ET Distribution' },
@@ -108,8 +108,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs text-pretty">
-              A premier global distributor connecting manufacturers and retailers across
-              electronics, home goods, industrial tools, and apparel since 2008.
+              A wholesale sourcing and distribution company connecting manufacturers and
+              retailers across grocery, specialty food, health &amp; wellness, household
+              essentials, and consumer products.
             </p>
             <div className="flex gap-4 mt-8">
               <a
@@ -196,7 +197,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} ET Distribution LLC. All rights reserved.
           </p>
           <p className="text-xs text-muted">
-            Los Angeles, CA &nbsp;&bull;&nbsp; Miami, FL &nbsp;&bull;&nbsp; New York, NY
+            Woodstock, New York
           </p>
         </div>
       </div>
