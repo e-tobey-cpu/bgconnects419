@@ -4,14 +4,14 @@ import Link from 'next/link'
 
 const footerLinks = {
   catalog: [
-    { href: '/products?category=grocery', label: 'Grocery & Specialty Food' },
+    { href: '/products?category=specialty', label: 'Specialty Foods' },
     { href: '/products?category=wellness', label: 'Health & Wellness' },
-    { href: '/products?category=household', label: 'Household & Cleaning' },
     { href: '/products?category=home', label: 'Home Goods' },
+    { href: '/products?category=kitchen', label: 'Kitchen & Dining' },
   ],
   company: [
     { href: '/about', label: 'About ET Distribution' },
-    { href: '/supplier-inquiry', label: 'Become a Supplier' },
+    { href: '/supplier-inquiry', label: 'Partner With ET Distribution' },
     { href: '/contact', label: 'Contact Us' },
   ],
   legal: [

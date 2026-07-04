@@ -10,23 +10,23 @@ import { useRef } from 'react'
 const benefits = [
   {
     icon: Globe,
-    title: 'Nationwide Reach',
-    description: 'Access to retailers, wholesalers, and distributors across 48 US states.',
+    title: 'Growing Distribution Network',
+    description: 'Connect with a distribution network that continues to expand across product categories.',
   },
   {
     icon: Package,
-    title: 'Streamlined Logistics',
-    description: 'We help coordinate warehousing, shipping, and fulfillment for reliable delivery.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Growth Partnership',
-    description: 'Demand insight and dedicated account support to help grow your placements.',
+    title: 'Wholesale Purchasing Opportunities',
+    description: 'Access wholesale purchasing opportunities that help move your product lines.',
   },
   {
     icon: Building2,
-    title: 'Compliance Support',
-    description: 'We guide you through certifications, labeling, and regulatory requirements.',
+    title: 'Long-Term Business Relationships',
+    description: 'We prioritize dependable, long-term partnerships built on trust and consistency.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Reliable Communication',
+    description: 'Straightforward, responsive communication throughout every stage of the partnership.',
   },
 ]
 
@@ -76,12 +76,13 @@ export default function SupplierInquiryPage() {
           <div className="max-w-7xl mx-auto">
             <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3">Partner With Us</p>
             <h1 className="text-display-lg font-serif font-bold text-foreground text-balance">
-              Become a Supplier
+              Partner With ET Distribution
             </h1>
             <p className="mt-4 text-muted-foreground max-w-2xl text-pretty">
-              Join our growing network of vetted suppliers and reach retailers, wholesalers, and
-              business buyers across the United States. We help with logistics, compliance, and
-              customer relationships so you can focus on what you do best.
+              ET Distribution is actively seeking relationships with manufacturers, distributors,
+              brand owners, importers, and wholesale suppliers. We welcome opportunities to expand
+              our sourcing network and build long-term partnerships across grocery, specialty food,
+              health &amp; wellness, home goods, household essentials, and consumer product categories.
             </p>
           </div>
         </div>
@@ -153,8 +154,8 @@ export default function SupplierInquiryPage() {
               <div className="text-center mb-12">
                 <h2 className="text-2xl font-serif font-bold text-foreground mb-3">Supplier Application</h2>
                 <p className="text-muted-foreground text-sm max-w-lg mx-auto text-pretty">
-                  Complete the form below and our team will evaluate your products for inclusion
-                  in our distribution network.
+                  Complete the form below to introduce your company and product lines. Our team
+                  reviews all supplier inquiries and partnership opportunities.
                 </p>
               </div>
 
