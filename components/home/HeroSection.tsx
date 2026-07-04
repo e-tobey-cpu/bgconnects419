@@ -75,8 +75,8 @@ export default function HeroSection() {
             className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-10 text-pretty"
           >
             ET Distribution connects leading manufacturers with wholesale buyers
-            across electronics, home goods, industrial tools, and apparel.
-            Serving 48 states with 15,000+ active SKUs.
+            across electronics, home goods, non-perishables, industrial tools, and apparel.
+            Serving 48 states with 50+ active SKUs.
           </motion.p>
 
           <motion.div
@@ -112,10 +112,10 @@ export default function HeroSection() {
         >
           <div className="flex flex-wrap gap-8 lg:gap-16">
             {[
-              { value: '15,000+', label: 'Active SKUs' },
-              { value: '200+', label: 'Verified Suppliers' },
+              { value: '50+', label: 'Active SKUs' },
+              { value: '8+', label: 'Verified Suppliers' },
               { value: '48', label: 'States Served' },
-              { value: '$2.4B+', label: 'Products Distributed' },
+              { value: '$150K+', label: 'Products Distributed' },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="text-2xl font-serif font-bold text-foreground">{stat.value}</span>
