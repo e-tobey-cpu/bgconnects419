@@ -13,24 +13,24 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: 'Verified Quality',
+    title: 'Reliable Supplier Relationships',
     description:
-      'We review every supplier for quality, compliance, and delivery reliability before onboarding, so you can trust the inventory you receive.',
+      'We prioritize dependable sourcing partners and long-term business relationships.',
   },
   {
-    title: 'Transparent Pricing',
+    title: 'Transparent Communication',
     description:
-      'No hidden fees. We quote clearly on unit cost, MOQ, freight, and duties so your procurement team can plan with confidence.',
+      'Clear communication and straightforward business practices guide every transaction.',
   },
   {
-    title: 'Scalable Logistics',
+    title: 'Scalable Distribution',
     description:
-      'From single pallets to full truckloads, our sourcing and logistics are built to scale with your business across 48 US states.',
+      'From small orders to larger purchasing programs, we help businesses source inventory efficiently.',
   },
   {
-    title: 'Dedicated Support',
+    title: 'Customer-Focused Service',
     description:
-      'Every account works with a sourcing contact who knows your categories and responds quickly to your needs.',
+      'We work closely with customers to identify products, suppliers, and sourcing opportunities that fit their needs.',
   },
 ]
 
@@ -50,9 +50,9 @@ export default function AboutPage() {
               A distributor built for the modern supply chain.
             </h1>
             <p className="text-muted-foreground text-pretty leading-relaxed max-w-2xl text-lg">
-              ET Distribution LLC is a wholesale sourcing and distribution company based in
-              Woodstock, New York, connecting manufacturers and suppliers with retailers,
-              wholesalers, distributors, and business buyers across the United States.
+              ET Distribution was founded to help businesses access reliable wholesale inventory
+              through trusted supplier relationships, connecting buyers with dependable products
+              at competitive pricing.
             </p>
           </div>
         </section>
@@ -67,19 +67,22 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed text-pretty">
                 <p>
-                  ET Distribution is built on a simple conviction: wholesale sourcing should be
-                  transparent, reliable, and built around the buyer&apos;s needs. We help businesses
-                  cut through fragmented supplier networks and opaque pricing.
+                  ET Distribution was founded to help businesses access reliable wholesale inventory
+                  through trusted supplier relationships. After identifying gaps in product
+                  availability, sourcing efficiency, and customer service across multiple categories,
+                  the company was built around a simple goal: connect buyers with dependable products
+                  at competitive pricing.
                 </p>
                 <p>
-                  Our sourcing spans grocery, specialty food, health &amp; wellness, household
-                  essentials, cleaning products, home goods, and consumer products. Through trusted
-                  supplier relationships, we connect businesses with dependable inventory and
-                  scalable sourcing solutions across 48 US states.
+                  Today, ET Distribution works with suppliers across grocery, health &amp; wellness,
+                  specialty foods, home goods, cleaning products, and household essentials while
+                  continuing to expand its sourcing network and distribution partnerships throughout
+                  the United States.
                 </p>
                 <p>
-                  Whether you&apos;re a regional retailer, a national chain, or an e-commerce operator
-                  scaling fast, ET Distribution is built to meet you where you are and grow with you.
+                  Whether serving retailers, wholesalers, distributors, or growing businesses, ET
+                  Distribution focuses on reliable sourcing, responsive communication, and long-term
+                  supplier relationships.
                 </p>
               </div>
             </div>
