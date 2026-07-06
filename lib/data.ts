@@ -397,9 +397,8 @@ export const products: Product[] = [
     price: 16.99,
     moq: 12,
     unit: 'unit',
-    // TODO: replace with uploaded Zab's Original Hot Sauce image
-    image: '/images/products/zabs-hotsauce.png',
-    images: ['/images/products/zabs-hotsauce.png'],
+    image: '/images/products/zabs-original-hot-sauce.jpg',
+    images: ['/images/products/zabs-original-hot-sauce.jpg'],
     shortDescription: 'Datil pepper hot sauce with a bright, balanced heat profile for specialty food and gourmet retail.',
     description:
       "Zab's Original Hot Sauce delivers a bright, balanced datil pepper heat crafted for specialty food and gourmet retail channels. A distinctive small-batch condiment that adds variety to any hot sauce set, sourced through trusted supplier relationships.",
@@ -423,9 +422,8 @@ export const products: Product[] = [
     price: 16.99,
     moq: 12,
     unit: 'unit',
-    // TODO: replace with uploaded Zab's St. Augustine Style Hot Sauce image
-    image: '/images/products/zabs-hotsauce.png',
-    images: ['/images/products/zabs-hotsauce.png'],
+    image: '/images/products/zabs-st-augustine-hot-sauce.jpg',
+    images: ['/images/products/zabs-st-augustine-hot-sauce.jpg'],
     shortDescription: 'Datil pepper hot sauce with a smooth, savory St. Augustine style flavor for specialty food buyers.',
     description:
       "Zab's St. Augustine Style Hot Sauce brings a smooth, savory datil pepper flavor inspired by Florida's oldest city. A distinctive small-batch condiment for specialty food and gourmet retail buyers.",
@@ -558,9 +556,8 @@ export const products: Product[] = [
     price: 24.98,
     moq: 12,
     unit: 'unit',
-    // TODO: replace with uploaded Organic PB Fit Peanut Butter Powder image
-    image: '/images/products/organic-pb.png',
-    images: ['/images/products/organic-pb.png'],
+    image: '/images/products/organic-pb-fit-powder.webp',
+    images: ['/images/products/organic-pb-fit-powder.webp'],
     shortDescription: 'Peanut butter powder in a 30 oz size for health, wellness, grocery, and pantry-focused retail buyers.',
     description:
       'Organic PB Fit Peanut Butter Powder delivers the flavor of peanut butter with a fraction of the fat in a convenient 30 oz size. A strong performer in health, wellness, grocery, and pantry-focused retail, backed by reliable supply.',
@@ -584,9 +581,8 @@ export const products: Product[] = [
     price: 35.95,
     moq: 12,
     unit: 'unit',
-    // TODO: replace with uploaded Sky & Sol Mineral Sunscreen image
-    image: '/images/products/skysol.png',
-    images: ['/images/products/skysol.png'],
+    image: '/images/products/sky-sol-sunscreen.jpg',
+    images: ['/images/products/sky-sol-sunscreen.jpg'],
     shortDescription: 'Mineral face and body sunscreen made with tallow and zinc oxide for health, wellness, and personal care retail.',
     description:
       'Sky & Sol Mineral Sunscreen SPF 50 is a face and body sunscreen made with tallow and zinc oxide for clean, effective sun protection. A contemporary personal care item that adds modern appeal to health and wellness assortments.',
@@ -612,9 +608,8 @@ export const products: Product[] = [
     price: 17.99,
     moq: 6,
     unit: 'unit',
-    // TODO: replace with uploaded Rubbermaid Commercial 6 Qt Container image
-    image: '/images/products/rubbermaid-commercial.png',
-    images: ['/images/products/rubbermaid-commercial.png'],
+    image: '/images/products/rubbermaid-commercial-6qt.jpg',
+    images: ['/images/products/rubbermaid-commercial-6qt.jpg'],
     shortDescription: 'Clear square 6 quart food storage container for kitchen, meal prep, and commercial storage use.',
     description:
       'The Rubbermaid Commercial 6 Qt Food Storage Container is a clear, square, stackable container built for kitchen, meal prep, and commercial storage use. A dependable, high-turn home and business goods item for retail and wholesale buyers.',
@@ -638,9 +633,8 @@ export const products: Product[] = [
     price: 32.9,
     moq: 6,
     unit: 'unit',
-    // TODO: replace with uploaded Honeywell Thermostat Guard image
-    image: '/images/products/honeywell-safety.png',
-    images: ['/images/products/honeywell-safety.png'],
+    image: '/images/products/honeywell-thermostat-guard.jpg',
+    images: ['/images/products/honeywell-thermostat-guard.jpg'],
     shortDescription: 'Clear thermostat guard designed to protect wall thermostats in residential, commercial, and property-management settings.',
     description:
       'The Honeywell Home CG512A1009 Thermostat Guard is a clear, lockable cover that protects wall thermostats from tampering and damage. A trusted, high-demand item for residential, commercial, and property-management settings.',
@@ -664,9 +658,8 @@ export const products: Product[] = [
     price: 179.98,
     moq: 4,
     unit: 'unit',
-    // TODO: replace with uploaded Tempur-Pedic Cool Luxury Mattress Pad image
-    image: '/images/products/honeywell-filters.png',
-    images: ['/images/products/honeywell-filters.png'],
+    image: '/images/products/tempur-pedic-mattress-pad.jpg',
+    images: ['/images/products/tempur-pedic-mattress-pad.jpg'],
     shortDescription: 'Queen-size cooling luxury mattress pad for bedding, home goods, and household comfort assortments.',
     description:
       'The Tempur-Pedic Cool Luxury Mattress Pad in Queen size adds cooling comfort and a premium feel to any bed. A high-value bedding item for home goods and household comfort assortments.',
@@ -693,9 +686,8 @@ export const products: Product[] = [
     price: 21.48,
     moq: 6,
     unit: 'unit',
-    // TODO: replace with uploaded Rubbermaid Brilliance 16-Cup Container image
-    image: '/images/products/rubbermaid-food-storage.png',
-    images: ['/images/products/rubbermaid-food-storage.png'],
+    image: '/images/products/rubbermaid-brilliance-16cup.jpg',
+    images: ['/images/products/rubbermaid-brilliance-16cup.jpg'],
     shortDescription: 'Airtight clear food storage container with lid for pantry organization, flour, sugar, and dry goods.',
     description:
       'The Rubbermaid Brilliance 16-Cup Airtight Food Storage Container keeps flour, sugar, and dry goods fresh with a leak-proof, airtight lid and crystal-clear design. A high-turn kitchen and dining staple for home stores and general merchandise retailers.',
@@ -720,9 +712,8 @@ export const products: Product[] = [
     price: 36.99,
     moq: 12,
     unit: 'unit',
-    // TODO: replace with uploaded Cork Pops Refill Cartridges image
-    image: '/images/products/corkpops-wine.png',
-    images: ['/images/products/corkpops-wine.png'],
+    image: '/images/products/cork-pops-refill-cartridges.jpg',
+    images: ['/images/products/cork-pops-refill-cartridges.jpg'],
     shortDescription: 'Low-pressure refill cartridges compatible with Cork Pops wine bottle openers.',
     description:
       'Cork Pops Wine Bottle Opener Refill Cartridges come in a convenient 2-pack of low-pressure cartridges compatible with Cork Pops openers. A dependable recurring-purchase accessory for kitchen, dining, and gift retail.',
