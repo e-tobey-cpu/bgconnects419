@@ -20,6 +20,8 @@ const officeLocations = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({
     name: '',
     company: '',
@@ -33,9 +35,35 @@ export default function ContactPage() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setError('')
+
+    // Prevent empty submissions: required fields must be filled.
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setError('Please fill in your name, email, and message before sending.')
+      return
+    }
+
+    setSending(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        setError(data?.error || 'Something went wrong. Please try again.')
+        return
+      }
+      // Only show the success screen once the email actually sends.
+      setSubmitted(true)
+    } catch {
+      setError('We could not send your message. Please check your connection and try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -68,7 +96,7 @@ export default function ContactPage() {
                     Thank you for reaching out. A member of our team will be in touch within 24 business hours.
                   </p>
                   <button
-                    onClick={() => { setSubmitted(false); setForm({ name: '', company: '', email: '', phone: '', subject: '', message: '' }) }}
+                    onClick={() => { setSubmitted(false); setError(''); setForm({ name: '', company: '', email: '', phone: '', subject: '', message: '' }) }}
                     className="mt-8 text-sm text-accent hover:text-foreground transition-colors duration-200"
                   >
                     Send another message
@@ -174,11 +202,18 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {error && (
+                    <p role="alert" className="mb-5 text-sm text-red-600">
+                      {error}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-medium text-sm hover:bg-accent/90 transition-colors duration-200 group"
+                    disabled={sending}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-medium text-sm hover:bg-accent/90 transition-colors duration-200 group disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {sending ? 'Sending…' : 'Send Message'}
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                   </button>
                 </form>
