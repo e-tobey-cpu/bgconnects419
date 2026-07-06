@@ -8,6 +8,20 @@ import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { categories } from '@/lib/data'
 
+// Choose a grid layout so 1–4 real product photos always tile cleanly in the card
+function collageGridClass(count: number) {
+  switch (count) {
+    case 1:
+      return 'grid-cols-1 grid-rows-1'
+    case 2:
+      return 'grid-cols-1 grid-rows-2'
+    case 3:
+      return 'grid-cols-2 grid-rows-2'
+    default:
+      return 'grid-cols-2 grid-rows-2'
+  }
+}
+
 export default function CategorySection() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -68,14 +82,25 @@ export default function CategorySection() {
                 className="group relative block overflow-hidden aspect-[3/4] bg-surface"
                 aria-label={`Browse ${cat.name}`}
               >
-                <Image
-                  src={cat.image}
-                  alt={cat.name}
-                  fill
-                  className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
+                  <div className={`grid h-full w-full gap-px bg-border ${collageGridClass(cat.collage.length)}`}>
+                    {cat.collage.map((src, idx) => (
+                      <div
+                        key={src}
+                        className={`relative bg-white ${cat.collage.length === 3 && idx === 0 ? 'col-span-2' : ''}`}
+                      >
+                        <Image
+                          src={src}
+                          alt=""
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 13vw"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
                 <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6">

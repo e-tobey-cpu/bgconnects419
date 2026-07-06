@@ -3,6 +3,8 @@ export type Category = {
   name: string
   description: string
   image: string
+  /** Real product photos used to build the category collage on the home page */
+  collage: string[]
   count: number
 }
 
@@ -33,6 +35,12 @@ export const categories: Category[] = [
     name: 'Specialty Foods',
     description: 'Gourmet syrups, seasonings, spice blends, and specialty condiments',
     image: '/images/category-specialty.png',
+    collage: [
+      '/images/products/torani-vanilla.jpg',
+      '/images/products/oldbay.jpg',
+      '/images/products/spicewalla.jpg',
+      '/images/products/zabs-original-hot-sauce.jpg',
+    ],
     count: 14,
   },
   {
@@ -40,6 +48,7 @@ export const categories: Category[] = [
     name: 'Grocery & Non-Perishables',
     description: 'Pantry staples, shelf-stable goods, and everyday grocery items',
     image: '/images/category-grocery.png',
+    collage: ['/images/products/goldmedal-cones.jpg'],
     count: 1,
   },
   {
@@ -47,6 +56,12 @@ export const categories: Category[] = [
     name: 'Health & Wellness',
     description: 'Protein bars, functional foods, sunscreen, and wellness products',
     image: '/images/category-wellness.png',
+    collage: [
+      '/images/products/iqbar-lemon.jpg',
+      '/images/products/organic-pb-fit-powder.webp',
+      '/images/products/sky-sol-sunscreen.jpg',
+      '/images/products/iqbar-chocolate.jpg',
+    ],
     count: 5,
   },
   {
@@ -54,6 +69,11 @@ export const categories: Category[] = [
     name: 'Home Goods',
     description: 'Food storage, home safety, bedding, and household essentials',
     image: '/images/category-home.png',
+    collage: [
+      '/images/products/honeywell-thermostat-guard.jpg',
+      '/images/products/tempur-pedic-mattress-pad.jpg',
+      '/images/products/rubbermaid-commercial-6qt.jpg',
+    ],
     count: 3,
   },
   {
@@ -61,6 +81,10 @@ export const categories: Category[] = [
     name: 'Kitchen & Dining',
     description: 'Food storage, wine accessories, and dining essentials',
     image: '/images/category-kitchen.png',
+    collage: [
+      '/images/products/rubbermaid-brilliance-16cup.jpg',
+      '/images/products/cork-pops-refill-cartridges.jpg',
+    ],
     count: 2,
   },
 ]
